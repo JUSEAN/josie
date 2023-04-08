@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Josie</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/png" href="IMG/favicon.png" sizes="32x32">
+</head>
+<body>
+
+    <div id="contenido">
+        <div id="titulo">
+            <h1>Happy Birthday Josie</h1>
+        </div>
+        <div id="contenedor">
+            <div id="mensajes">
+                <h3 id="author"></h3>
+                <p id="message"></p>
+                <button id="mix-button" onclick="showMessage()">MIX</button>
+				<button id="music-button" style="display: none;" onclick="location.href = 'music.html';">Music</button>
+            </div>
+        </div>
+    </div>
+
+	<script>
+		var messages = [
+			{
+				author: "Juanito",
+				message: "¡Feliz cumpleaños, Josiee! Sé que nos conocemos desde hace muy poco. Aún recuerdo ese día cuando nos conocimos y hablamos por toda la tarde, hasta que tuve que irme. Me hiciste creer en mí y me diste la motivación para empezar con el inglés. Siempre que hablo contigo, me siento muy bien y me divierto jugando contigo. Espero que pases un excelente día. Creo que aquella partida donde nos conocimos no fue una casualidad."
+			},
+			{
+				author: "Jenny",
+				message: "HAPPY BIRTHDAY JOSIE <33 I love you soo much hope you have the bestest birthday ever and spend it with lots of friends!! we've been getting closer these couple of months and it makes me soo happy you're so intelligent and funny its always a good day whenever we play games ! haven't seen you since you were like 11 i miss you hopefully i can see you very soon again love you <33 never change Josie <3"
+			},
+			{
+				author: "allan",
+				message: " Holaa Josieee 🥳🥳, we’ve known each other for like a year now but it feels like I’ve known you forever. You’ve introduced me to so many funny, wonderful, amazing, talented, beautiful, people and Churo 🙂. You’ve also helped me through several bad times during that one year and I’m so grateful for that. Remember that time you made a whole group chat so that I didn’t have to join your server because you didn’t like me? Yeah me too 😭😭 thanks for eventually letting me in, id probably still be lost asf if I hadn’t met you and everyone else. I hope today goes amazing and that all your wishes come true because if anyone deserves it, it’s you. Happy Birthday Josie 🎂"
+			},
+			{
+				author: "Timmy",
+				message: "We've known each other for so long now, met in the among us days like 3 or so years now and you got to put up with my annoying ass lol. you've always been such a cool guy to talk to, so I'll always be there for you. Hope you have the best birthday and have fun even tho it's without the life of the party(me). Anywaaaays... HAPPY BIRTHDAY BESTIEEE LOVE YOU BITCH!!~"
+			},
+			{
+				author: "That bitch",
+				message: "hello brudder folks HAPPY BIRTHDAY i love you until forever you’re the best brother. I’m so glad you were the fastest sperm because bitch uh uh you got me fucked up. I am aware of how lucky I am to be ur sister and I’m eternally grateful. You radiant such infectious energy and it bounces onto anyone around you. I appreciate you immensely. I can’t wait to see you accomplish all of your goals and ur ambitions. THE WORLD IS YOURS. we just living in it fr <333 I LOVEUUUU🫶🏼"
+			},
+			{
+				author: "Pretty Nicki",
+				message: "Happy Birthday Josie!!!!! I'm grateful to have you a part of my life and can't wait to see where this friendship takes us beyond gaming! You crack me up the way no one has I'm and srs about that 😂😂 You get me and I get you! We HAVE to link up this year if not next!!! P.S. SHAW'DNT THEY BE ASLEEP?!-Love Nicholas!"
+			},
+			{
+				author: "Oso",
+				message: "sheeshhhhh the big 23, your Jordan year yessirskii 😎 Happy birthday Josie! May you be blessed with many more birthdays along with many years of life filled with bliss, prosperity and good health. Continue being the BADDEST Reyna out there and keep SLAYING with Qiyana. Much love homie <3"
+			},
+			{
+				author: "Stinky Jailbait",
+				message: "HELLO JOSIE!! Happy birthday! 🎉 🥳🥳 I have no clue how old you’re turning but I know you’re old now 💔 anyways we haven’t known each other for that long but I hope we stay friends :3 From your favorite stinky jailbait <33 Ps. I hope you get a crow for your birthday"
+			},
+			{
+				author: "Fransely",
+				message: "Hello, my beautiful lover, I wanna wish you a very happy birthday n tell u I love u so much, you're one of the coolest people I've ever met and I'm so glad we're friends, and you're definitely the best league midlaner I've played with 👀Thank you for showing me what's gooood when playing TFT 😂 and being patient w me, & laughing at every stupid thing I say, I know you gotta be lying frr but I still appreciate you sm, It's been 2 years since we met and my life's been a little brighter knowing you <3!I hope you have a great day-ur fav worm"
+			},
+			{
+				author: ":)",
+				message: "Here’s to Eleven more years of friendship :* "
+			}
+		];
+
+		var currentMessage = 0;
+		var authorEl = document.getElementById("author");
+		var messageEl = document.getElementById("message");
+		var musicButtonEl = document.getElementById("music-button");
+
+		showMessage(); // Mostramos el primer mensaje al cargar la página
+
+		function showMessage() {
+			var author = messages[currentMessage].author;
+			var message = messages[currentMessage].message;
+
+			authorEl.innerText = author;
+			messageEl.innerText = message;
+
+			if (author === "Juanito") {
+				musicButtonEl.style.display = "inline-block";
+			} else {
+				musicButtonEl.style.display = "none";
+			}
+
+			currentMessage++;
+			if (currentMessage >= messages.length) {
+				currentMessage = 0;
+			}
+		}
+	</script>
+  </body>
+</html>
+
+
